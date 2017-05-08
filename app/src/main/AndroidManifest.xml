@@ -19,7 +19,13 @@
         <activity android:name=".ForgotPassword" />
         <activity android:name=".LoggedIn" />
         <activity android:name=".AdminUser" />
-        <activity android:name=".AssignWork"></activity>
+        <activity android:name=".AssignWork" />
+        <activity
+            android:name=".Director"
+            android:label="@string/title_activity_director"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".CheckUpdate" />
+        <activity android:name=".CheckForWork"></activity>
     </application>
 
 </manifest>

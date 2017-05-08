@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.aviralgarg0996.imsecsupport.LoginPage">
-
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.aviralgarg0996.imsecsupport.Director"
+    tools:showIn="@layout/activity_director">
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -18,62 +17,52 @@
         android:weightSum="1">
 
 
+
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/tv1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="5dp"
-            android:text="Email" />
+            android:text="Work Title" />
 
         <EditText
-            android:id="@+id/email2"
+            android:id="@+id/Work_Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:hint="abc@xyz.com"
-            android:inputType="textEmailAddress"
-            android:maxLines="1"
+            android:inputType="text"
             android:textColor="@android:color/black" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/tv2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="5dp"
-            android:text="Password" />
+            android:text="Work Description" />
 
         <EditText
-            android:id="@+id/password2"
+            android:id="@+id/Work_Description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:focusableInTouchMode="true"
-            android:hint="**********"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:inputType="textMultiLine" />
 
         <Button
-            android:id="@+id/btn_login"
+            android:id="@+id/btn_adddb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:text="LOGIN" />
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:textAlignment="center"
-            android:text="Forget Password?" />
+            android:text="Add Work" />
+
 
         <ProgressBar
             android:id="@+id/progressBar2"
@@ -88,4 +77,4 @@
 
 
 
-</android.support.constraint.ConstraintLayout >
+</android.support.constraint.ConstraintLayout>

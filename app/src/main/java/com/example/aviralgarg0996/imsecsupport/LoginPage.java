@@ -24,12 +24,15 @@ public class LoginPage extends AppCompatActivity {
     private EditText userText,PassText;
     private String UserEmail,UserPassword;
     private FirebaseAuth auth;
+    private FirebaseAuth.AuthStateListener mAuthlistener;
     private ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
         auth=FirebaseAuth.getInstance();
+        //mAuthlistener=new FirebaseAuth.AuthStateListener();
+        //auth.addAuthStateListener(mAuthlistener);
         btnLogin=(Button)findViewById(R.id.btn_login);
         ForgetText=(TextView)findViewById(R.id.textView3);
         userText=(EditText)findViewById(R.id.email2);
@@ -70,7 +73,6 @@ else {
                     // If sign in fails, display a message to the user. If sign in succeeds
                     // the auth state listener will be notified and logic to handle the
                     // signed in user can be handled in the listener.
-                    progressBar.setVisibility(View.GONE);
                     if (!task.isSuccessful()) {
                         // there was an error
                         Toast.makeText(LoginPage.this,"Error in logging!!",Toast.LENGTH_LONG).show();
@@ -85,7 +87,6 @@ else {
                     }}
                 }
             });
-
 
 }
     }

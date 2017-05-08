@@ -31,6 +31,14 @@ public class AdminUser extends AppCompatActivity {
                 startActivity(new Intent(AdminUser.this,LoginPage.class));
             }
         });
+        btn_checkUpdates.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(AdminUser.this,CheckUpdate.class));
+            }
+        });
+
+
 
     }
 }
