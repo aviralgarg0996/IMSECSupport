@@ -41,7 +41,6 @@ public class CheckForWork extends AppCompatActivity {
         mWorkList.setLayoutManager(new LinearLayoutManager(this));
 
     }
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -52,15 +51,17 @@ public class CheckForWork extends AppCompatActivity {
 
         ) {
             @Override
-            protected void populateViewHolder(WorkViewHolder viewHolder, Work model, int position) {
+            protected void populateViewHolder(WorkViewHolder viewHolder, Work model, final int position) {
 
                 viewHolder.setWorkTit(model.getWorkTit());
                 viewHolder.setWorkDesc(model.getWorkDesc());
                 viewHolder.setCurdate(model.getDate());
-               subButton=(Button)viewHolder.mView.findViewById(R.id.BtnSubmit1);
+               //subButton=(Button)viewHolder.mView.findViewById(R.id.BtnSubmit1);
                 viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        Toast.makeText(CheckForWork.this,"You clicked on card"+String.valueOf(position),Toast.LENGTH_LONG).show();
+
                         AlertDialog.Builder builder1 = new AlertDialog.Builder(CheckForWork.this);
                         builder1.setMessage("You want to Submit your Work");
                         builder1.setCancelable(true);
@@ -70,7 +71,6 @@ public class CheckForWork extends AppCompatActivity {
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
                                         Toast.makeText(CheckForWork.this,"Work is Submitted",Toast.LENGTH_LONG).show();
-                                    subButton.setBackgroundColor(Color.GREEN);
                                     }
                                 });
 
@@ -90,7 +90,6 @@ public class CheckForWork extends AppCompatActivity {
         };
         mWorkList.setAdapter(firebaseRecyclerAdapter);
     }
-
     public static class WorkViewHolder extends RecyclerView.ViewHolder{
     View mView;
     public WorkViewHolder(View itemView) {

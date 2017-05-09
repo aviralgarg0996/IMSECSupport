@@ -9,14 +9,17 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class CheckUpdate extends ListActivity {
-    private String[] Department = new String[] {
-            "Director", "SportsOfficer", "AccountsOffice","Hostel Warden","Registrar Office","Chief Proctor"};
+    Variables v=new Variables();
+   private String[] Department = v.users;
+           //new String[] {
+           // "Director", "SportsOfficer", "AccountsOffice","Hostel Warden","Registrar Office","Chief Proctor"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_update);
         setListAdapter(new ArrayAdapter(this,
-                android.R.layout.simple_list_item_1, Department));
+                android.R.layout.simple_list_item_1,Department));
     }
 
     @Override

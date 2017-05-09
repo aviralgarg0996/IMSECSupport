@@ -11,8 +11,8 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class AssignWork extends ListActivity {
-   private String[] Department = new String[] {
-            "Director", "SportsOfficer", "AccountsOffice","Hostel Warden","Registrar Office","Chief Proctor"};
+    Variables v=new Variables();
+   private String[] Department = v.users;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
